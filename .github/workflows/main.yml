@@ -18,6 +18,8 @@ jobs:
           node-version: 18.x
       - name: Install and build
         run: npm install && npm run build
+      - name: Deploy gh-pages
+        run: npm run deploy
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
