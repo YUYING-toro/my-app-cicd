@@ -22,5 +22,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
-          folder: build
+        run: git checkout gh-pages && git merge main && git push origin gh-pages && npm run gh-pages -d build
 
